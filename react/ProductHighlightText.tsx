@@ -45,7 +45,12 @@ const ProductHighlightText: FC<Props> = ({
           .replace(/[\u0300-\u036f]/g, '')
           .replace(/[^a-zA-Z0-9]/g, '')
           .replace(/\s/g, '')
-        return `flag-${formattedName?.toLowerCase()}`
+
+        const modifiedName = formattedName.toLowerCase().startsWith('flag-')
+          ? formattedName.toLowerCase()
+          : `flag-${formattedName.toLowerCase()}`
+
+        return `flag-${modifiedName?.toLowerCase()}`
       }, [value?.highlight.name])
 
       result.highlightName = (
