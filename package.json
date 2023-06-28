@@ -7,11 +7,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
     "test": "cd ./react && yarn test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
       "eslint --fix",
