@@ -1,7 +1,7 @@
 {
   "vendor": "tfcusf",
   "name": "product-highlights",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "title": "Product Highlights",
   "description": "",
   "builders": {
@@ -16,7 +16,9 @@
     "vtex.css-handles": "0.x",
     "vtex.store-components": "3.x"
   },
-  "registries": ["smartcheckout"],
+  "registries": [
+    "smartcheckout"
+  ],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
