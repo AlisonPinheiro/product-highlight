@@ -61,6 +61,7 @@ const ProductHighlightText: FC<Props> = ({
           data-highlight-name={value.highlight.name}
           data-highlight-id={value.highlight.id}
           data-highlight-type={value.type}
+          className="highlightImg"
         />
       )
     } else {
