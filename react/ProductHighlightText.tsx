@@ -43,14 +43,10 @@ const ProductHighlightText: FC<Props> = ({
         const formattedName = value?.highlight.name
           .normalize('NFD')
           .replace(/[\u0300-\u036f]/g, '')
-          .replace(/[^a-zA-Z0-9]/g, '')
+          .replace(/[^a-zA-Z0-9-]/g, '')
           .replace(/\s/g, '')
 
-        const modifiedName = formattedName.toLowerCase().startsWith('flag-')
-          ? formattedName.toLowerCase()
-          : `flag-${formattedName.toLowerCase()}`
-
-        return `flag-${modifiedName?.toLowerCase()}`
+        return formattedName?.toLowerCase()
       }, [value?.highlight.name])
 
       result.highlightName = (
@@ -61,7 +57,7 @@ const ProductHighlightText: FC<Props> = ({
           data-highlight-name={value.highlight.name}
           data-highlight-id={value.highlight.id}
           data-highlight-type={value.type}
-          className="highlightImg"
+          className="mw4"
         />
       )
     } else {
